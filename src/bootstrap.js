@@ -1,15 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import reducers from "./reducers";
+import { createStore, applyMiddleware } from 'redux';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
-import "./style/main.scss";
+import './style/main.scss';
 
-import Home from "./components/home"
+import Home from './components/home'
+import Results from './components/results'
 
 function main() {
   ReactDOM.render(
@@ -17,9 +18,8 @@ function main() {
       <BrowserRouter>
         <Switch>
           <Route path='/' component={Home}/>
-          <Route path='/results' component={Home}/>
+          <Route path='/results' component={Results}/>
         </Switch>
-        <Home />
       </BrowserRouter>
     </Provider>,
     document.querySelector(".app-wrapper")
