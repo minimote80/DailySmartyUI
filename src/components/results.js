@@ -5,10 +5,10 @@ class Results extends Component {
     render() {
         return (
             <div>
-                <h1>Results</h1>
-                <Logo/>
+                <Logo size={55} />
+                <SearchBar />
             </div>
         )
     }
 }
-export default Results
+export default Results;

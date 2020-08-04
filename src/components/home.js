@@ -10,7 +10,7 @@ export default class Home extends Component {
         <div>
           <Logo />
           <SearchBar />
-          <RecentPosts />
+           <RecentPosts />
         </div>
       </div>
     );
