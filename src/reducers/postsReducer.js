@@ -1,10 +1,11 @@
 import {
-    SET_RECENT_POSTS
+    SET_RECENT_POSTS,
+    SET_RESULTS_POSTS
 } from '../actions/types';
 
 const INIT_STATE = {
-    posts: [],
-    recentPOsts: []
+    resultsPosts: [],
+    recentPosts: []
 }
 
 export default function(state = INIT_STATE, action) {
@@ -15,6 +16,12 @@ export default function(state = INIT_STATE, action) {
                     ...state, 
                     recentPosts
                 }
+                case SET_RESULTS_POSTS:
+                    const resultsPosts = actoin.paylod;
+                    return {
+                        ...state,
+                        posts: resultsPosts
+                    }
         default:
             return state;
     }

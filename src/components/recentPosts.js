@@ -14,7 +14,6 @@ class RecentPosts extends Component {
     
     renderPosts = function() {
         console.log('%c response: ', 'color: yellow', this.props)
-       console.log(this.props, "hi")
         // const posts = this.props.recentPosts.map((post, index) => {
         //     if(index < 3) {
         //         return (
@@ -33,7 +32,6 @@ class RecentPosts extends Component {
         //         )
         //     }
         // })
-        return "helllo"
     }
 
     render() {
