@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 
-import Logo from "./logo";
+import Logo from './logo';
 import SearchBar from './searchBar';
-import RecentPosts from "./recentPosts";
+import RecentPosts from './recentPosts';
 
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 class Home extends Component {
 
-  handleSearchBarSubmit = function(query) {
-
-    this.props.history.push('/results')
-}
+  handleSearchBarSubmit(query) {
+      this.props.fetchPostsWithQuery(query);
+      this.props.history.push('/results');
+  }
 
   render() {
     return (
       <div>
         <div>
-          <Logo />
+          <Logo/>
           <SearchBar onSubmit={(query) => this.handleSearchBarSubmit(query)}/>
-           <RecentPosts />
+          <RecentPosts/>
         </div>
       </div>
     );

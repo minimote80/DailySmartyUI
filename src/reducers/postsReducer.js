@@ -17,7 +17,7 @@ export default function(state = INIT_STATE, action) {
                     recentPosts
                 }
                 case SET_RESULTS_POSTS:
-                    const resultsPosts = actoin.paylod;
+                    const resultsPosts = action.paylod;
                     return {
                         ...state,
                         posts: resultsPosts
