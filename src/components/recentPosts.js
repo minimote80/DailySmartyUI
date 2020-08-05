@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import * as actions from '../actions';
 
-// import Post from './post'
+import Post from './posts'
 
 class RecentPosts extends Component {
 
@@ -14,26 +14,16 @@ class RecentPosts extends Component {
     
     renderPosts = function() {
         console.log('%c response: ', 'color: yellow', this.props)
-        // const posts = this.props.recentPosts.map((post, index) => {
-        //     if(index < 3) {
-        //         return (
-        //             <Post {...post} key={index}/>
-        //         )
-        //     }
-           
-        // })
-        // return posts
-        // const posts = this.props.posts.map((post, index) =>{
-        //     if(index < 3) {
-        //         return (
-        //             <li key={index}>
-        //                 {post.title}
-        //             </li>
-        //         )
-        //     }
-        // })
+       console.log(this.props, "hi")
+        const posts = this.props.recentPosts.map((post, index) => {
+            if(index < 3) {
+                return (
+                    <Post {...post} key={index}/>
+                )
+            }
+        })
     }
-
+ 
     render() {
         return (
          <div className="recent-posts">
